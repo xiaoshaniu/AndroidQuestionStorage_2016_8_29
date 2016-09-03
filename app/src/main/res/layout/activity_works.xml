@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shijun.androidquestionstorage_2016_8_29.Works">
+
+    <RelativeLayout
+        android:id="@+id/relative_01"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#CD4F39"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true">
+        <RelativeLayout
+            android:id="@+id/works_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/work_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_arrow_back_white_24dp"
+                />
+            <TextView
+                android:id="@+id/work_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="第1"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:layout_toRightOf="@id/work_img"/>
+            <TextView
+                android:id="@+id/work_txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="/2道题"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:layout_toRightOf="@id/work_txt1"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+<FrameLayout
+    android:id="@+id/fl_01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/relative_01"
+    android:layout_above="@+id/linear_01">
+</FrameLayout>
+    <LinearLayout
+        android:id="@+id/linear_01"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/txt_last"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="上一题"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/answer_footicon01"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/txt_store"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="收藏"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/answer_footicon02"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/txt_next"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="下一题"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:drawableTop="@mipmap/answer_footicon04"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

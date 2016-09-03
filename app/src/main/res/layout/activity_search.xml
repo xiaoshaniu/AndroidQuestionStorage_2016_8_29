@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.shijun.androidquestionstorage_2016_8_29.SearchActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#CD4F39"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:id="@+id/search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_arrow_back_white_24dp"
+                />
+            <TextView
+                android:id="@+id/search_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="分类练习"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:layout_toRightOf="@id/search_img"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <EditText
+            android:background="#CCCCCC"
+            android:id="@+id/edt_search"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:hint="搜索试题名称"
+            android:drawableLeft="@mipmap/ic_search_white_24dp"/>
+
+        <Button
+            android:background="#fff"
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="搜索"
+            android:layout_toRightOf="@+id/edt_search"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>

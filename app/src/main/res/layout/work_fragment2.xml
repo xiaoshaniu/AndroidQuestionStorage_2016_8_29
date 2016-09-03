@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEE8AA">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#fff">
+        <TextView
+            android:id="@+id/txt_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="heiheiehieehieheiee"
+            android:singleLine="true"
+            android:textSize="25dp"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="xiaoyang"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/checkbox"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_check1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="xiaoyang"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/checkbox1"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_check2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="xiaoyang"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/checkbox2"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_check3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="xiaoyang"
+            android:layout_toRightOf="@id/checkbox3"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+</LinearLayout>

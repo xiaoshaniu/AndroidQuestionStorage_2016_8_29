@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.example.shijun.androidquestionstorage_2016_8_29.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#CD4F39">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="注册账号"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        <EditText
+            android:id="@+id/register_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户名"
+            android:textColorHint="#7F7F7F"
+            android:textColor="#7F7F7F"
+            android:drawableLeft="@drawable/user_color"
+            android:layout_margin="10dp"
+            />
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:textColorHint="#7F7F7F"
+            android:textColor="#7F7F7F"
+            android:drawableLeft="@drawable/password_color"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/register_account"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/register_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入昵称"
+        android:textColorHint="#7F7F7F"
+        android:textColor="#7F7F7F"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入号码"
+        android:textColorHint="#7F7F7F"
+        android:textColor="#7F7F7F"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp">
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="注册"
+            android:background="@drawable/login_color"
+            />
+    </LinearLayout>
+
+</LinearLayout>
