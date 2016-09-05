@@ -34,7 +34,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     private ListView lv_03;
     private String url = "http://115.29.136.118:8080/web-question/app/question?method=list";
     private String[] type = {"单选","多选","判断","简答"};
-    private String totalElements;
+    private int totalElements;
     private List<Question> list ;
     private RelativeLayout search_title;
     private boolean flag = true;
@@ -98,9 +98,10 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getBaseContext(), Works.class);
-                intent.putExtra("flag",i);
+//                intent.putExtra("flag",i);
                 intent.putExtra("total",totalElements);
                 intent.putExtra("question",list.get(i));
+                intent.putExtra("id",list.get(i).getId());
                 startActivity(intent);
             }
         });
@@ -122,7 +123,8 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
 
                             JSONObject json = new JSONObject(result);
                             JSONArray jsonarray = json.getJSONArray("content");
-                            totalElements = json.getString("totalElements");
+                            totalElements = json.getInt("totalElements");
+                            System.out.println(totalElements+"=========================");
                             for (int i =0;i<jsonarray.length();i++){
                                 Question question = new Question();
                                 JSONObject js = jsonarray.getJSONObject(i);

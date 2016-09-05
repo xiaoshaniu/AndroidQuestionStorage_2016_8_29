@@ -29,7 +29,7 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(200);
 
                     hd.postDelayed(new Runnable() {
                         @Override
@@ -47,7 +47,7 @@ public class WelcomeActivity extends AppCompatActivity {
                             msg.obj = 1;
                             hd.sendMessage(msg);
                         }
-                    },1000);
+                    },100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

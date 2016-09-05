@@ -17,7 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="@drawable/login_color">
         <ImageView
             android:id="@+id/re_img"
             android:layout_width="wrap_content"
@@ -43,7 +44,8 @@
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:background="@drawable/login_color"/>
 
 </RelativeLayout>
 
@@ -92,6 +94,7 @@
         android:layout_height="100dp" />
 
     <TextView
+        android:id="@+id/txt_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="xiaoli"
@@ -125,7 +128,8 @@
             android:layout_marginLeft="5dp"
             android:drawableLeft="@mipmap/ic_settings_grey600_18dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/press"/>
 
         <Button
             android:id="@+id/btn_exit"
@@ -136,7 +140,8 @@
             android:layout_marginRight="5dp"
             android:drawableLeft="@mipmap/ic_exit_to_app_grey600_18dp"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/press"/>
     </RelativeLayout>
 </LinearLayout>
 

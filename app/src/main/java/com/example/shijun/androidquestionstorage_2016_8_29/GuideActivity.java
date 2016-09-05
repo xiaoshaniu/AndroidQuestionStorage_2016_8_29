@@ -50,6 +50,13 @@ public class GuideActivity extends AppCompatActivity implements  ViewPager.OnPag
 
             long l = calendar.getTimeInMillis() - instance.getTimeInMillis();
             if (l>100){
+
+                SharedPreferences share = getSharedPreferences("test",MODE_PRIVATE);
+                boolean flag = share.getBoolean("flag", true);
+                if (!flag){
+                    startActivity(new Intent(getBaseContext(),SecondActivity.class));
+                }
+
                 startActivity(new Intent(getBaseContext(),MainActivity.class));
                 this.finish();
             }
@@ -72,6 +79,10 @@ public class GuideActivity extends AppCompatActivity implements  ViewPager.OnPag
 
 
     }
+
+
+
+
 
     private void initTime() {
         //存储刚进入的时间

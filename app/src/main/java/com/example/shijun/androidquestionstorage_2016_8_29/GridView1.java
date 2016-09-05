@@ -75,12 +75,10 @@ public class GridView1 extends AppCompatActivity implements View.OnClickListener
                         question.setOptions(options);
                     }
 
-
                     question.setId(id);
                     question.setAnswer(answer);
                     question.setContent(content);
                     question.setPubTime(pubTime);
-
                     question.setTypeid(typeid);
 
                     System.out.println(id+answer+content+pubTime+typeid+"==============");

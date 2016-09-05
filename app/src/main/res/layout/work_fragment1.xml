@@ -48,7 +48,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="heiheiehieehieheiee"
-            android:singleLine="true"
             android:textSize="20dp"
             android:layout_margin="10dp"
             android:gravity="center_vertical"/>

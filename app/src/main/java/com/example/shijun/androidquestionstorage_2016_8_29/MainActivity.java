@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onSuccess(String result) throws JSONException {
                         JSONObject js = new JSONObject(result);
                         String success = js.getString("success");
+                        JSONObject jsonObject = js.getJSONObject("user");
+                        int id = jsonObject.getInt("id");
+                        System.out.println(id);
                         if (success.equals("true")){
                             System.out.println("登入成功");
                             Toast.makeText(MainActivity.this,"登入成功",Toast.LENGTH_SHORT).show();

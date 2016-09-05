@@ -11,10 +11,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -50,21 +52,27 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private ListView lv_01;
     private int[] imgview = {R.drawable.home_nav_icon01,R.drawable.home_nav_icon02,R.drawable.home_nav_icon03,R.drawable.home_nav_icon04};
     private String[] text = {"分类练习","题目查找","我得成就","我得收藏"};
+    private TextView txt_second;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_second);
         x.view().inject(this);
+
+//        昵称
+        txt_second = (TextView) findViewById(R.id.txt_second);
 //九宫格视图
         gridview = (GridView) findViewById(R.id.gridview);
 //listview
         lv_01 = (ListView) findViewById(R.id.lv_01);
         initListview();
 
-//        设置和退出
+//        设置和退出还有搜索
+        ImageView search_img = (ImageView) findViewById(R.id.search_img);
         Button btn_change = (Button) findViewById(R.id.btn_change);
         Button btn_exit = (Button) findViewById(R.id.btn_exit);
+        search_img.setOnClickListener(this);
         btn_change.setOnClickListener(this);
         btn_exit.setOnClickListener(this);
 
@@ -195,7 +203,12 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                     flag= true;
                 }
             }break;
+            case R.id.search_img:{
+                startActivity(new Intent(getBaseContext(),SearchActivity.class));
+            }break;
             case R.id.btn_change:{
+//                startActivity();
+                startActivityForResult(new Intent(getBaseContext(),ChangeActivity.class),0);
 
             }break;
             case R.id.btn_exit:{
@@ -203,12 +216,30 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
             }break;
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+//      通过requestcode来设置textview值，同时也可以通过resultcode来设置
+//        if (requestCode==0){
+//            txt_second.setText(nicheng);
+//            System.out.println("zhuyiyang");
+//        }
+//        或者是使用resultcode来设置textview值
+        if (resultCode==RESULT_OK){
+            String nicheng = data.getStringExtra("nicheng");
+            txt_second.setText(nicheng);
+            System.out.println("shaniuyiyang");
+        }
 
 
     }
 
 
-//    RelativeLayout re_title = (RelativeLayout) findViewById(R.id.re_title);
+    //    RelativeLayout re_title = (RelativeLayout) findViewById(R.id.re_title);
 //        ImageView re_img = (ImageView) findViewById(R.id.re_img);
 //        TextView re_txt = (TextView) findViewById(R.id.re_txt);
 //        ImageView search_img = (ImageView) findViewById(R.id.search_img);
